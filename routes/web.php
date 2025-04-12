@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,5 @@ Route::get('/hello', function (){
         ->view('hello',$data,200)
         ->header('Content-Type',$type);
 });
+
+Route::resource('products', ProductController::class);
