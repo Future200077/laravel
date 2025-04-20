@@ -50,11 +50,11 @@ class LoginRegisterController extends Controller
             'password' => Hash::make($request->password)
         ]);
 
-        $credentials = $request->only('email', 'password');
-        Auth::attempt($credentials);
-        $request->session()->regenerate();
-        return redirect()->route('dashboard')
-        ->withSuccess('You have successfully registered & logged in!');
+        // $credentials = $request->only('email', 'password');
+        // Auth::attempt($credentials);
+        // $request->session()->regenerate();
+        return redirect()->route('login')
+        ->withSuccess('You have successfully registered in! Please login');
     }
 
     /**
@@ -80,11 +80,23 @@ class LoginRegisterController extends Controller
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials))
+        // if(Auth::attempt($credentials))
+        // {
+        //     $request->session()->regenerate();
+        //     return redirect()->route('dashboard')
+        //         ->withSuccess('You have successfully logged in!');
+        // }
+
+
+        if (Auth::attempt($credentials)) 
         {
             $request->session()->regenerate();
-            return redirect()->route('dashboard')
-                ->withSuccess('You have successfully logged in!');
+        
+            if (Auth::user()->role === 'admin') {
+                return redirect()->route('users.index')->withSuccess('Welcome Admin!');
+            } else {
+                return redirect()->route('dashboard')->withSuccess('Welcome User!');
+            }
         }
 
         return back()->withErrors([
@@ -102,6 +114,10 @@ class LoginRegisterController extends Controller
     {
         if(Auth::check())
         {
+            if (Auth::user()->role === 'admin') {
+                //  Block admins from seeing dashboard
+                return redirect()->route('users.index');
+            }
             return view('auth.dashboard');
         }
         

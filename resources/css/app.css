@@ -1,0 +1,250 @@
+/* app.css */
+
+/* body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f6f8fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  }
+  
+  .heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background: #0056b3;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .card-body {
+    color: #666;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+
+  .logout-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #c82333;
+  } */
+
+
+  /* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Forum Container */
+.forum-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.forum-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Post Form */
+.post-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.input-title,
+.input-content {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.input-title:focus,
+.input-content:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.btn-post {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-post:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.btn-post:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* Topic Card */
+.topic-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.topic-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.topic-content {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.topic-author {
+  font-size: 14px;
+  color: #888;
+  margin-top: 12px;
+}
+
+/* Replies Section */
+.replies-section {
+  margin-top: 20px;
+}
+
+.reply-card {
+  background-color: #f1f1f1;
+  padding: 12px;
+  border-left: 4px solid #4caf50;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.reply-content {
+  font-size: 16px;
+  color: #333;
+}
+
+.reply-author {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Reply Form */
+.reply-form {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.input-reply {
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.input-reply:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.btn-reply {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.btn-reply:hover {
+  background-color: #45a049;
+}
